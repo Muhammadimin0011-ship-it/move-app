@@ -1,12 +1,431 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Move bd</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+
+    <nav>
+      <div class="search-top">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input type="text" placeholder="Найти фильм, сериал, персону..." />
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Добро пожаловать.</h1>
+
+        <p>Миллионы фильмов, сериалов и людей. Исследуйте сейчас.</p>
+
+        <div class="hero-search">
+          <input type="text" placeholder="Найти фильм, сериал, персону....." />
+
+          <button>Поиск</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREND -->
+
+    <section class="section">
+      <div class="top">
+        <h2>В тренде</h2>
+
+        <div class="tabs">
+          <button class="active">Сегодня</button>
+          <button>На этой неделе</button>
+        </div>
+      </div>
+
+      <div class="cards">
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Интерстеллар</h3>
+          <p>5 ноября 2014</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Бэтмен</h3>
+          <p>2 марта 2022</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Дюна</h3>
+          <p>15 сентября 2021</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Мстители</h3>
+          <p>26 апреля 2019</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Джокер</h3>
+          <p>4 октября 2019</p>
+        </div>
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Человек Паук</h3>
+          <p>17 декабря 2021</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Доктор Стрэндж</h3>
+          <p>6 мая 2022</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/5P8SmMzSNYikXpxil6BYzJ16611.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Оппенгеймер</h3>
+          <p>21 июля 2023</p>
+        </div>
+      </div>
+    </section>
+    <!-- TRAILERS SECTION -->
+
+    <section class="trailers">
+      <div class="trailers-top">
+        <div class="left">
+          <h2>Последние трейлеры</h2>
+
+          <div class="tabs">
+            <button class="active">Popular</button>
+            <button>В кинотеатрах</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="trailer-cards">
+        <!-- CARD 1 -->
+
+        <div class="trailer-card">
+          <div class="trailer-image">
+            <img
+              src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200&auto=format&fit=crop"
+            />
+
+            <div class="play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Следствие ведут овечки</h3>
+          <p>Get Tickets Now</p>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="trailer-card">
+          <div class="trailer-image">
+            <img
+              src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop"
+            />
+
+            <div class="play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Мандалорец и Грогу</h3>
+          <p>Now Playing in Theaters</p>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="trailer-card">
+          <div class="trailer-image">
+            <img
+              src="https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?q=80&w=1200&auto=format&fit=crop"
+            />
+
+            <div class="play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Пассажир</h3>
+          <p>Drive carefully. There's danger on the road.</p>
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="trailer-card">
+          <div class="trailer-image">
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
+            />
+
+            <div class="play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Каратель</h3>
+          <p>“I’m the one who’s doing the punishing now.”</p>
+        </div>
+      </div>
+    </section>
+    <!-- POPULAR SECTION -->
+
+    <section class="popular">
+      <div class="popular-top">
+        <h2>Что популярно</h2>
+
+        <div class="tabs">
+          <button class="active">В кинотеатрах</button>
+          <button>На ТВ</button>
+        </div>
+      </div>
+
+      <div class="popular-cards">
+        <!-- CARD -->
+
+        <div class="popular-card">
+          <div class="popular-image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Re: Жизнь в другом мире</h3>
+          <p>4 апреля 2016</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="popular-card">
+          <div class="popular-image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Извне</h3>
+          <p>20 февраля 2022</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="popular-card">
+          <div class="popular-image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Следопыт</h3>
+          <p>11 февраля 2024</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="popular-card">
+          <div class="popular-image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Twinkle Love</h3>
+          <p>5 мая 2021</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="popular-card">
+          <div class="popular-image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>HaHaHaHaHa</h3>
+          <p>6 ноября 2020</p>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="popular-card">
+          <div class="popular-image">
+            <img
+              src="https://image.tmdb.org/t/p/w500/5P8SmMzSNYikXpxil6BYzJ16611.jpg"
+            />
+
+            <div class="dots">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <h3>Смотрите, что происходит</h3>
+          <p>16 июля 2009</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN SECTION -->
+
+    <section class="join">
+      <div class="overlay">
+        <div class="join-left">
+          <h1>Присоединяйтесь сегодня</h1>
+
+          <p>
+            Get access to maintain your own custom personal lists, track what
+            you've seen and search and filter for what to watch next—regardless
+            if it's in theatres or on TV.
+          </p>
+
+          <button>Зарегистрироваться</button>
+        </div>
+
+        <div class="join-right">
+          <ul>
+            <li>Maintain a personal watchlist</li>
+            <li>Filter by your subscribed streaming services</li>
+            <li>Log the movies and TV shows you've seen</li>
+            <li>Build custom lists</li>
+            <li>Contribute to improve our database</li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
