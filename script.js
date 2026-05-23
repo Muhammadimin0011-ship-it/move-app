@@ -1,30 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const input = document.getElementById("search-input")
+const buton = document.getElementById("search-btn")
 const API_KEY = "2c688a94a24cd6215037c4cce4825281";
 
 async function getMovies(query) {
@@ -40,7 +15,17 @@ async function getMovies(query) {
 
 }
 
-getMovies("forsaj");
+function searchMovie() {
+    try {
+        let res = getMovies(input.value)
+
+    } catch (error) {
+        console.log(error);
+
+        alert("xatolik")
+    }
+
+}
 
 
 
