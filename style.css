@@ -5,10 +5,7 @@
      font-family: 'Montserrat', sans-serif;
  }
 
- body {
-     overflow-x: hidden;
 
- }
 
  /* NAVBAR */
 
@@ -150,111 +147,77 @@
 
  /* CARDS */
 
- .cards {
+ /* API DAN KELAYOTGAN CARDS */
+
+ #cards {
      display: flex;
      gap: 25px;
      overflow-x: auto;
-     padding-bottom: 10px;
+     padding-bottom: 20px;
+     scroll-behavior: smooth;
  }
 
- .cards::-webkit-scrollbar {
+ #cards::-webkit-scrollbar {
      height: 8px;
  }
 
- .cards::-webkit-scrollbar-thumb {
-     background: #00d4aa;
+ #cards::-webkit-scrollbar-thumb {
+     background: #d7d7d7;
      border-radius: 20px;
  }
 
- .card {
+ .movilCart {
      min-width: 220px;
-     transition: 0.3s;
      cursor: pointer;
+     transition: 0.3s;
  }
 
- .card:hover {
-     transform: translateY(-10px);
+ .movilCart:hover {
+     transform: translateY(-5px);
  }
 
- .image {
-     position: relative;
+ .movilCart img {
      width: 100%;
      height: 320px;
-     border-radius: 20px;
-     overflow: hidden;
-     margin-bottom: 15px;
- }
-
- .image img {
-     width: 100%;
-     height: 100%;
      object-fit: cover;
+     border-radius: 18px;
+     margin-bottom: 15px;
+     transition: 0.4s;
  }
 
- .dots {
-     position: absolute;
-     top: 15px;
-     right: 15px;
-     width: 40px;
-     height: 40px;
-     border-radius: 50%;
-     background: #fff;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     font-size: 18px;
-     color: #444;
+ .movilCart:hover img {
+     transform: scale(1.03);
  }
 
- .card h3 {
-     font-size: 23px;
+ .movilCart h1 {
+     font-size: 22px;
+     font-weight: 700;
+     line-height: 1.4;
      margin-bottom: 8px;
  }
 
- .card p {
-     color: #666;
-     font-size: 15px;
+ .movilCart p {
+     font-size: 16px;
+     color: #555;
  }
 
- @media(max-width:900px) {
+ /* MOBILE */
 
-     .hero {
-         padding: 40px;
+ @media(max-width:600px) {
+
+     .movilCart {
+         min-width: 170px;
      }
 
-     .hero-content h1 {
-         font-size: 45px;
+     .movilCart img {
+         height: 250px;
      }
 
-     .hero-content p {
-         font-size: 20px;
-     }
-
-     .hero-search {
-         height: 55px;
-     }
-
-     .hero-search input {
-         font-size: 16px;
-     }
-
-     .hero-search button {
-         width: 120px;
-         font-size: 16px;
-     }
-
-     .section {
-         padding: 30px;
-     }
-
-     .top {
-         flex-direction: column;
-         align-items: flex-start;
+     .movilCart h1 {
+         font-size: 18px;
      }
 
  }
-
-
 
  /* TRAILERS */
 
@@ -508,6 +471,8 @@
      font-size: 22px;
      line-height: 2;
  }
+
+
 
  @media(max-width:900px) {
 
