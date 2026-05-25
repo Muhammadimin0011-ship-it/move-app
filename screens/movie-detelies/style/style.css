@@ -1,249 +1,161 @@
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+body {
+  background: #111;
+  color: white;
+  overflow-x: hidden;
+}
+
+.movieDetail {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.movieBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+}
+
+.darkOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.522);
+
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.posterBox {
+  width: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7);
+}
+
+.posterBox img {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  max-width: 700px;
+}
+
+.content h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.content h1 span {
+  color: #aaa;
+  font-weight: 400;
+}
+
+.movieMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  color: #ddd;
+}
+
+.age {
+  border: 1px solid #aaa;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.scoreCircle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.scoreCircle svg {
+  width: 70px;
+  height: 70px;
+  transform: rotate(-90deg);
+}
+
+.scoreCircle circle {
+  fill: none;
+  stroke-width: 6;
+  stroke: rgba(255, 255, 255, 0.15);
+}
+
+.scoreCircle .progress {
+  stroke: #21d07a;
+  stroke-linecap: round;
+  stroke-dasharray: 188;
+}
+
+.scoreText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tagline {
+  color: #bbb;
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.content h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.overview {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+@media(max-width:900px) {
+
+  .container {
+    justify-content: center;
+    text-align: center;
   }
 
-  body {
-    color: white;
+  .movieMeta,
+  .scoreRow {
+    justify-content: center;
   }
 
-  #result {
-    min-height: 100vh;
+  .content h1 {
+    font-size: 40px;
   }
 
-  .movieDetail {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
+  .posterBox {
+    width: 280px;
   }
 
-  .movieBg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    transform: scale(1.1);
-  }
-
-  .overlay {
-    position: relative;
-    z-index: 2;
-    min-height: 100vh;
-    padding: 40px;
-    background: linear-gradient(to top,
-        rgba(0, 0, 0, 0.95),
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.9));
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-
-  .poster {
-    width: 320px;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-    flex-shrink: 0;
-  }
-
-  .poster img {
-    width: 100%;
-    display: block;
-  }
-
-  .movieInfo {
-    max-width: 650px;
-  }
-
-  .movieInfo h1 {
-    font-size: 55px;
-    margin-bottom: 10px;
-  }
-
-  .tagline {
-    color: #ffcc00;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .desc {
-    color: #d0d0d0;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    font-size: 17px;
-  }
-
-  .infoRow {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-  }
-
-  .infoBox {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 14px 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-  }
-
-  .infoBox h3 {
-    font-size: 13px;
-    color: #999;
-    margin-bottom: 5px;
-  }
-
-  .infoBox p {
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  .genres {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .genres span {
-    padding: 10px 18px;
-    background: #ffcc00;
-    color: black;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  @media (max-width: 900px) {
-    .overlay {
-      justify-content: center;
-      text-align: center;
-      padding: 25px;
-    }
-
-    .movieInfo h1 {
-      font-size: 38px;
-    }
-
-    .poster {
-      width: 260px;
-    }
-
-    .infoRow {
-      justify-content: center;
-    }
-
-    .genres {
-      justify-content: center;
-    }
-  }
-
-  .glass {
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.45);
-  }
-
-  .overlay {
-    position: relative;
-    z-index: 2;
-  }
-
-  .topInfo {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-
-  .movieType,
-  .movieRate {
-    padding: 10px 18px;
-    border-radius: 40px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  .movieType {
-    background: #00d68f;
-    color: black;
-  }
-
-  .movieRate {
-    background: #ffcc00;
-    color: black;
-  }
-
-  .infoCard {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 18px;
-    border-radius: 18px;
-    min-width: 140px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-  }
-
-  .infoCard:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.12);
-  }
-
-  .buttons {
-    margin-top: 35px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .watchBtn,
-  .saveBtn {
-    padding: 16px 28px;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  .watchBtn {
-    background: linear-gradient(135deg, #00e0ff, #00ff95);
-    color: black;
-  }
-
-  .saveBtn {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .watchBtn:hover,
-  .saveBtn:hover {
-    transform: scale(1.05);
-  }
-
-  .movieInfo h1 {
-    font-size: 70px;
-    margin-bottom: 15px;
-    line-height: 1.1;
-  }
-
-  .tagline {
-    font-size: 22px;
-    color: #ffcc00;
-    margin-bottom: 25px;
-    font-style: italic;
-  }
-
-  .desc {
-    font-size: 18px;
-    line-height: 1.9;
-    color: #ddd;
-    margin-bottom: 30px;
-  }
+}
