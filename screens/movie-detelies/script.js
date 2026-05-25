@@ -134,5 +134,35 @@ async function getInfoDetailScreen(params) {
 
 </div>
 
-`;
-})();
+`})();
+
+const result = document.getElementById("result");
+
+fetch(
+    `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`,
+    options
+)
+    .then((res) => res.json())
+    .then((res) => {
+        console.log(res);
+
+        // faqat 10 ta aktyor
+        const actors = res.cast.slice(0, 10);
+
+        result.innerHTML = actors
+            .map(
+                (actor) => `
+        <div class="actor-card">
+          <img 
+            src="https://image.tmdb.org/t/p/w300${actor.profile_path}" 
+            alt="${actor.name}"
+          />
+          
+          <h3>${actor.name}</h3>
+          
+          <p>${actor.character}</p>
+        </div>
+      `
+            )
+            .join("");
+    })
