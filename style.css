@@ -556,3 +556,167 @@
      }
 
  }
+
+ /* LEADERBOARD SECTION */
+
+ .leaderboard-section {
+     padding: 50px 70px;
+     background-color: #fff;
+     width: 100%;
+ }
+
+ .leaderboard-header {
+     display: flex;
+     align-items: center;
+     gap: 30px;
+     margin-bottom: 35px;
+ }
+
+ .leaderboard-header h2 {
+     font-size: 38px;
+     font-weight: 800;
+     color: #000;
+ }
+
+ .leaderboard-legend {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+ }
+
+ .legend-item {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     font-size: 14px;
+     font-weight: 600;
+     color: #333;
+ }
+
+ .dot {
+     width: 12px;
+     height: 12px;
+     border-radius: 50%;
+     display: inline-block;
+ }
+
+ .dot.all-time {
+     background: #00e6b8;
+ }
+
+ .dot.weekly {
+     background: linear-gradient(to right, #ffb380, #ff4d6d);
+ }
+
+ .leaderboard-grid {
+     display: flex;
+     gap: 50px;
+     justify-content: space-between;
+ }
+
+ .leaderboard-col {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 25px;
+ }
+
+ .leaderboard-item {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+ }
+
+ .user-avatar {
+     width: 64px;
+     height: 64px;
+     border-radius: 50%;
+     object-fit: cover;
+     flex-shrink: 0;
+ }
+
+ /* Profil rasmi yo'qlar uchun harfli avatar */
+ .text-avatar {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+     font-size: 24px;
+     font-weight: 700;
+ }
+
+ .user-info {
+     flex: 1;
+ }
+
+ .user-info h3 {
+     font-size: 18px;
+     font-weight: 700;
+     margin-bottom: 6px;
+     color: #000;
+ }
+
+ .bar-container {
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+     width: 100%;
+ }
+
+ .bar-row {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     width: 100%;
+ }
+
+ .bar {
+     height: 10px;
+     border-radius: 10px;
+     max-width: 320px;
+     /* Chiziqlar haddan tashqari cho'zilib ketmasligi uchun */
+ }
+
+ .all-time-bar {
+     background: linear-gradient(90deg, #00e6b8, #00c7ff);
+ }
+
+ .weekly-bar {
+     background: linear-gradient(90deg, #ffb380, #ff4d6d);
+ }
+
+ .bar-value {
+     font-size: 14px;
+     font-weight: 700;
+     color: #000;
+     min-width: 60px;
+ }
+
+ /* RESPONSIVE (MOBIL QURILMALAR UCHUN) */
+
+ @media(max-width: 900px) {
+     .leaderboard-section {
+         padding: 30px;
+     }
+
+     .leaderboard-grid {
+         flex-direction: column;
+         gap: 30px;
+     }
+
+     .leaderboard-header {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 15px;
+     }
+ }
+
+ @media(max-width: 600px) {
+     .leaderboard-header h2 {
+         font-size: 28px;
+     }
+
+     .bar {
+         max-width: 150px;
+     }
+ }

@@ -2,29 +2,29 @@ let id = window.location.href.slice(window.location.href.indexOf("=") + 1);
 const MEDIAL_LINK = "https://media.themoviedb.org/t/p/w200";
 const MEDIAL_BG = "https://media.themoviedb.org/t/p/w500";
 const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOTg4OGM2NThjYTVmOTRkZjdlODg0Y2Q3ODY4MTc2MiIsIm5iZiI6MTc3ODE1MzU0NC45NDgsInN1YiI6IjY5ZmM3ODQ4M2JlMWQzMzlmZGE2NDhiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.L3gJtgI96y3tkN9a7PiKLesNb8Wl-XRDibPEAesn-N4",
-  },
+    method: "GET",
+    headers: {
+        accept: "application/json",
+        Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOTg4OGM2NThjYTVmOTRkZjdlODg0Y2Q3ODY4MTc2MiIsIm5iZiI6MTc3ODE1MzU0NC45NDgsInN1YiI6IjY5ZmM3ODQ4M2JlMWQzMzlmZGE2NDhiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.L3gJtgI96y3tkN9a7PiKLesNb8Wl-XRDibPEAesn-N4",
+    },
 };
 
 async function getInfoDetailScreen(params) {
-  return await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
-    options,
-  )
-    .then((res) => res.json())
-    .then((res) => res);
+    return await fetch(
+        `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+        options,
+    )
+        .then((res) => res.json())
+        .then((res) => res);
 }
 
 (async function () {
-  let result = document.getElementById("results");
-  let info = await getInfoDetailScreen();
-  console.log(info);
+    let result = document.getElementById("results");
+    let info = await getInfoDetailScreen();
+    console.log(info);
 
-  result.innerHTML = `
+    result.innerHTML = `
 
 <div class="movieDetail">
 
@@ -34,13 +34,13 @@ async function getInfoDetailScreen(params) {
         alt=""
     >
 
-    <div class="overlay">
+    <div class="darkOverlay"></div>
 
-        <div class="glass"></div>
+    <div class="container">
 
         <!-- POSTER -->
 
-        <div class="poster">
+        <div class="posterBox">
 
             <img 
                 src="${MEDIAL_LINK + info.poster_path}" 
@@ -51,84 +51,82 @@ async function getInfoDetailScreen(params) {
 
         <!-- INFO -->
 
-        <div class="movieInfo">
-
-            <div class="topInfo">
-
-                <span class="movieType">
-                    ${info.status}
-                </span>
-
-                <span class="movieRate">
-                    ⭐ ${info.vote_average.toFixed(1)}
-                </span>
-
-            </div>
+        <div class="content">
 
             <h1>
                 ${info.title}
+                <span>
+                    (${info.release_date?.slice(0, 4)})
+                </span>
             </h1>
+
+            <div class="movieMeta">
+
+                <span class="age">18</span>
+
+                <p>
+                    ${info.release_date}
+                </p>
+
+                <span>•</span>
+
+                <p>
+                    ${info.genres.map((g) => g.name).join(", ")}
+                </p>
+
+                <span>•</span>
+
+                <p>
+                    ${Math.floor(info.runtime / 60)}h 
+                    ${info.runtime % 60}m
+                </p>
+
+            </div>
+
+            <!-- SCORE -->
+
+            <div class="scoreRow">
+
+                <div class="scoreCircle">
+
+                    <svg>
+                        <circle cx="35" cy="35" r="30"></circle>
+
+                        <circle 
+                            class="progress"
+                            cx="35" 
+                            cy="35" 
+                            r="30"
+                            style="
+                            stroke-dashoffset:
+                            ${188 - (188 * info.vote_average) / 10};
+                            "
+                        ></circle>
+                    </svg>
+
+                    <div class="scoreText">
+                        ${Math.floor(info.vote_average * 10)}%
+                    </div>
+
+                </div>
+
+                <h3>Рейтинг</h3>
+
+            </div>
+
+            <!-- TAGLINE -->
 
             <p class="tagline">
                 ${info.tagline || "No tagline"}
             </p>
 
-            <p class="desc">
+            <!-- OVERVIEW -->
+
+            <h2>Обзор</h2>
+
+            <p class="overview">
                 ${info.overview}
             </p>
-
-            <!-- INFO BOXES -->
-
-            <div class="infoRow">
-
-                <div class="infoCard">
-                    <h3>📅 Release</h3>
-                    <p>${info.release_date}</p>
-                </div>
-
-                <div class="infoCard">
-                    <h3>⏳ Runtime</h3>
-                    <p>${info.runtime} min</p>
-                </div>
-
-                <div class="infoCard">
-                    <h3>🌍 Language</h3>
-                    <p>${info.original_language.toUpperCase()}</p>
-                </div>
-
-                <div class="infoCard">
-                    <h3>🔥 Popularity</h3>
-                    <p>${Math.floor(info.popularity)}</p>
-                </div>
-
-            </div>
-
-            <!-- GENRES -->
-
-            <div class="genres">
-
-                ${info.genres
-      .map(
-        (item) =>
-          `<span>${item.name}</span>`
-      )
-      .join("")}
-
-            </div>
-
-            <!-- BUTTONS -->
-
-            <div class="buttons">
-
-                <button class="watchBtn">
-                    ▶ Watch Trailer
-                </button>
-
-                <button class="saveBtn">
-                    + Save
-                </button>
-
-            </div>
 
         </div>
 
@@ -136,5 +134,5 @@ async function getInfoDetailScreen(params) {
 
 </div>
 
-`;;
+`;
 })();
