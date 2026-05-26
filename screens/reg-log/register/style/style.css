@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #e50914;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+    text-align: center;
+}
+
+p {
+    max-width: 600px;
+    text-align: center;
+    color: #d1d1d1;
+    margin-bottom: 35px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+input {
+    width: 350px;
+    padding: 15px 18px;
+    margin-bottom: 18px;
+
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 16px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #cfcfcf;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #e50914;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+}
+
+a {
+    text-decoration: none;
+}
+
+h5 {
+    color: #e50914;
+    margin-bottom: 25px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+h5:hover {
+    color: white;
+}
+
+button {
+    width: 350px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #e50914;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff1f2d;
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
