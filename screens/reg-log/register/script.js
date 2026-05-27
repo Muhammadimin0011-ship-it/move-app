@@ -1,30 +1,34 @@
 const btn = document.getElementById("add");
 
 btn.addEventListener("click", () => {
-    const rname = document.getElementById("for-name");
 
-    const rpass = document.getElementById("for-password")
+    const rname = document.getElementById("for-name").value;
+
+    const rpass = document.getElementById("for-password").value;
 
     const users =
         JSON.parse(localStorage.getItem("users")) || [];
 
     const Newuser = {
-        rname,
-        rpass
-    }
+        username: rname,
+        password: rpass
+    };
 
     try {
+
         users.push(Newuser);
 
-        localStorage.setItem("users",
+        localStorage.setItem(
+            "users",
             JSON.stringify(users)
-
         );
 
-        alert("Register succesful ✅")
-    } catch (error) {
-        console.log(error);
-        
-    }
-})
+        alert("Register successful ✅");
 
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+});
