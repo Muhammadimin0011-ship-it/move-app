@@ -1,260 +1,260 @@
 body {
-  background: #0b0f19;
-  color: white;
-  overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
+    background: #0b0f19;
+    color: white;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* ================= MOVIE DETAIL ================= */
 
 .movieDetail {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
 }
 
 .movieBg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.1);
-  filter: blur(8px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    filter: blur(8px);
 }
 
 .darkOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top,
-      rgba(11, 15, 25, 1),
-      rgba(11, 15, 25, 0.75),
-      rgba(11, 15, 25, 0.95));
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(11, 15, 25, 1),
+            rgba(11, 15, 25, 0.75),
+            rgba(11, 15, 25, 0.95));
 }
 
 .container {
-  position: relative;
-  z-index: 2;
-  width: 90%;
-  margin: auto;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  padding: 50px 0;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 50px 0;
 }
 
 /* ================= POSTER ================= */
 
 .posterBox {
-  width: 340px;
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-  transition: 0.4s;
+    width: 340px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    transition: 0.4s;
 }
 
 .posterBox:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .posterBox img {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
 /* ================= CONTENT ================= */
 
 .content {
-  max-width: 750px;
+    max-width: 750px;
 }
 
 .content h1 {
-  font-size: 65px;
-  margin-bottom: 15px;
-  line-height: 1.1;
+    font-size: 65px;
+    margin-bottom: 15px;
+    line-height: 1.1;
 }
 
 .content h1 span {
-  color: #9ca3af;
-  font-weight: 400;
+    color: #9ca3af;
+    font-weight: 400;
 }
 
 .movieMeta {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 35px;
-  color: #d1d5db;
-  font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    color: #d1d5db;
+    font-size: 16px;
 }
 
 .age {
-  border: 1px solid #9ca3af;
-  padding: 5px 12px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #9ca3af;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* ================= SCORE ================= */
 
 .scoreRow {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 35px;
 }
 
 .scoreCircle {
-  position: relative;
-  width: 80px;
-  height: 80px;
+    position: relative;
+    width: 80px;
+    height: 80px;
 }
 
 .scoreCircle svg {
-  width: 80px;
-  height: 80px;
-  transform: rotate(-90deg);
+    width: 80px;
+    height: 80px;
+    transform: rotate(-90deg);
 }
 
 .scoreCircle circle {
-  fill: none;
-  stroke-width: 7;
-  stroke: rgba(255, 255, 255, 0.15);
+    fill: none;
+    stroke-width: 7;
+    stroke: rgba(255, 255, 255, 0.15);
 }
 
 .scoreCircle .progress {
-  stroke: #22c55e;
-  stroke-linecap: round;
-  stroke-dasharray: 188;
+    stroke: #22c55e;
+    stroke-linecap: round;
+    stroke-dasharray: 188;
 }
 
 .scoreText {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 22px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 /* ================= TEXT ================= */
 
 .tagline {
-  color: #9ca3af;
-  font-size: 28px;
-  font-style: italic;
-  margin-bottom: 30px;
+    color: #9ca3af;
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 30px;
 }
 
 .content h2 {
-  font-size: 38px;
-  margin-bottom: 18px;
+    font-size: 38px;
+    margin-bottom: 18px;
 }
 
 .overview {
-  font-size: 20px;
-  line-height: 1.9;
-  color: #d1d5db;
+    font-size: 20px;
+    line-height: 1.9;
+    color: #d1d5db;
 }
 
 /* ================= ACTORS ================= */
 
 .actorTitle {
-  font-size: 40px;
-  padding-left: 20px;
-  margin-top: 30px;
+    font-size: 40px;
+    padding-left: 20px;
+    margin-top: 30px;
 }
 
 #result {
-  display: flex;
-  gap: 25px;
-  overflow-x: auto;
-  padding: 30px 20px 60px;
-  scroll-behavior: smooth;
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 30px 20px 60px;
+    scroll-behavior: smooth;
 }
 
 #result::-webkit-scrollbar {
-  height: 10px;
+    height: 10px;
 }
 
 #result::-webkit-scrollbar-thumb {
-  background: #374151;
-  border-radius: 20px;
+    background: #374151;
+    border-radius: 20px;
 }
 
 .actor-card {
-  min-width: 220px;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 22px;
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: 0.4s;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    min-width: 220px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .actor-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .actor-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 .actor-card h3 {
-  font-size: 20px;
-  margin-top: 15px;
-  padding: 0 12px;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 0 12px;
 }
 
 .actor-card p {
-  color: #9ca3af;
-  font-size: 15px;
-  padding: 10px 12px 20px;
+    color: #9ca3af;
+    font-size: 15px;
+    padding: 10px 12px 20px;
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
 
-  .container {
-    justify-content: center;
-    text-align: center;
-  }
+    .container {
+        justify-content: center;
+        text-align: center;
+    }
 
-  .movieMeta,
-  .scoreRow {
-    justify-content: center;
-  }
+    .movieMeta,
+    .scoreRow {
+        justify-content: center;
+    }
 
-  .content h1 {
-    font-size: 42px;
-  }
+    .content h1 {
+        font-size: 42px;
+    }
 
-  .posterBox {
-    width: 280px;
-  }
+    .posterBox {
+        width: 280px;
+    }
 
-  .tagline {
-    font-size: 22px;
-  }
+    .tagline {
+        font-size: 22px;
+    }
 
-  .overview {
-    font-size: 18px;
-  }
+    .overview {
+        font-size: 18px;
+    }
 
-  .actor-card {
-    min-width: 180px;
-  }
+    .actor-card {
+        min-width: 180px;
+    }
 
-  .actor-card img {
-    height: 250px;
-  }
+    .actor-card img {
+        height: 250px;
+    }
 }
