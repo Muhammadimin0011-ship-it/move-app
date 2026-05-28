@@ -47,7 +47,7 @@
      height: 420px;
      background:
          linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-         url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop');
+         url('');
      background-size: cover;
      background-position: center;
      display: flex;
