@@ -3,7 +3,7 @@ const MEDIAL_LINK = "https://media.themoviedb.org/t/p/w200";
 const MEDIAL_BG = "https://media.themoviedb.org/t/p/w500";
 const options = {
     method: "GET",
-    headers: {
+    headers: {       
         accept: "application/json",
         Authorization:
             "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOTg4OGM2NThjYTVmOTRkZjdlODg0Y2Q3ODY4MTc2MiIsIm5iZiI6MTc3ODE1MzU0NC45NDgsInN1YiI6IjY5ZmM3ODQ4M2JlMWQzMzlmZGE2NDhiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.L3gJtgI96y3tkN9a7PiKLesNb8Wl-XRDibPEAesn-N4",
@@ -165,4 +165,9 @@ fetch(
       `
             )
             .join("");
-    })
+    });
+
+
+    function goPersonPage(id) {
+        window.location.href = `screens/person-detelies/index.html?id=${id}`
+    }

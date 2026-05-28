@@ -198,7 +198,7 @@
 
  .movilCart p {
      font-size: 16px;
-     color: #555;
+     color: #ffffff;
  }
 
  /* MOBILE */
@@ -382,7 +382,7 @@
 .movilCart {
     min-width: 220px;
     max-width: 220px;
-    background: #1b1b1b;
+    background: #ffffff;
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
@@ -402,7 +402,7 @@
 
 .movilCart h1 {
     font-size: 18px;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px;
 }
 

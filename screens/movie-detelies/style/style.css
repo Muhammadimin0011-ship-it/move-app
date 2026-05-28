@@ -1,5 +1,5 @@
 body {
-    background: #0b0f19;
+    background: #f1f1f1;
     color: white;
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
@@ -164,8 +164,9 @@ body {
 
 .actorTitle {
     font-size: 40px;
-    padding-left: 20px;
-    margin-top: 30px;
+    padding-left: 60px;
+    margin-top: 70px;
+    color: #000000;
 }
 
 #result {
@@ -181,17 +182,17 @@ body {
 }
 
 #result::-webkit-scrollbar-thumb {
-    background: #374151;
+    background: #ffffff;
     border-radius: 20px;
 }
 
 .actor-card {
     min-width: 220px;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgb(255, 255, 255);
     border-radius: 22px;
     overflow: hidden;
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgb(241, 241, 241);
     transition: 0.4s;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -209,13 +210,14 @@ body {
 }
 
 .actor-card h3 {
+    color: #000000;
     font-size: 20px;
     margin-top: 15px;
     padding: 0 12px;
 }
 
 .actor-card p {
-    color: #9ca3af;
+    color: #000000;
     font-size: 15px;
     padding: 10px 12px 20px;
 }
