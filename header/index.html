@@ -1,12 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Move db</title>
-    <link rel="stylesheet" href="../header/style.css">
-</head>
-<body>
-    <script src="../header/scrtipt.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMDB Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header
+      class="header normal smaller no_animation smaller subtle show_search_true"
+    >
+      <div class="content">
+        <div class="sub_media">
+          <div class="nav_wrapper">
+            <a class="logo" aria-label="TMDB" href="/">
+              <img
+                alt="The Movie Database (TMDB)"
+                width="154"
+                height="20"
+                src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+              />
+            </a>
+            <ul class="dropdown_menu navigation" role="menubar">
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/movie"
+                  >Фильмы <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/movie">Популярные</a>
+                  <a href="/movie/now-playing">Сейчас в кино</a>
+                  <a href="/movie/upcoming">Ожидаемые</a>
+                  <a href="/movie/top-rated">Лучшие</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/tv"
+                  >Сериалы <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/tv">Популярные</a>
+                  <a href="/tv/airing-today">В эфире сегодня</a>
+                  <a href="/tv/on-the-air">Сейчас в эфире</a>
+                  <a href="/tv/top-rated">Лучшие</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/person"
+                  >Люди <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/person">Популярные люди</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/award"
+                  >Awards <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/award">Популярные награды</a>
+                  <a href="/award/upcoming">Предстоящие</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="#"
+                  >Ещё <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/discuss">Обсуждения</a>
+                  <a href="/leaderboard">Доска лидеров</a>
+                  <a href="/talk">Поддержка</a>
+                  <a href="/docs">Документация API</a>
+                  <a href="/api-for-business">API для бизнеса</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="flex">
+            <ul class="primary">
+              <li class="glyph new_buttons">
+                <a
+                  class="new_icon"
+                  aria-label="Добавить фильм или сериал"
+                  href="#"
+                >
+                  <span class="plus-icon">+</span>
+                </a>
+              </li>
+              <li class="translate">
+                <div>UZ</div>
+              </li>
+              <li><a href="/login">Войти</a></li>
+              <li><a href="/signup">Присоединиться к TMDB</a></li>
+              <li class="glyph search_buttons">
+                <a class="search" aria-label="Поиск" href="#">
+                  <span class="search-icon"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></span>
+                </a>
+                <a class="close hide" aria-label="Закрыть поиск" href="#">
+                  <span class="close-icon">✕</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="search_bar">
+        <section class="search show_search_true">
+          <div class="sub_media">
+            <form id="search_form" action="/search" method="get">
+              <label>
+                <input
+                  type="text"
+                  id="search_v4"
+                  name="query"
+                  placeholder="Поиск фильмов, сериалов, персон..."
+                  autocomplete="off"
+                />
+              </label>
+              <input type="submit" value="Найти" />
+            </form>
+          </div>
+        </section>
+      </div>
+    </header>
+    <script src="header.js"></script>
+  </body>
 </html>

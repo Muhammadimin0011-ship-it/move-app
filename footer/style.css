@@ -1,0 +1,142 @@
+.tmdb-footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tmdb-footer {
+  background-color: #032541;
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+  padding: 50px 60px 30px 60px;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 0 0 240px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #01b4e4, #90cea1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.join-community {
+  background: linear-gradient(97deg, #01b4e4, #90cea1);
+  border: none;
+  color: #032541;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  width: 100%;
+  max-width: 220px;
+}
+
+.join-community:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.footer-col {
+  min-width: 150px;
+}
+
+.footer-col h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  color: #90cea1;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.75;
+  transition:
+    opacity 0.2s,
+    color 0.2s;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: #90cea1;
+}
+
+.footer-copyright {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+@media (max-width: 1000px) {
+  .tmdb-footer {
+    padding: 40px 30px 20px;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-brand {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .join-community {
+    margin: 0 auto;
+  }
+  .footer-links {
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .footer-col {
+    text-align: center;
+  }
+}
