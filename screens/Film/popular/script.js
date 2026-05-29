@@ -6,7 +6,7 @@ const options = {
     headers: {
         accept: "application/json",
         Authorization:
-            "Bearer SENING_TOKENING"
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYzY4OGE5NGEyNGNkNjIxNTAzN2M0Y2NlNDgyNTI4MSIsIm5iZiI6MTc3OTQ0OTI3MC4xODUsInN1YiI6IjZhMTAzZGI2YWE2MDU3ODA0MzU2MzljMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._41LqI31b0nnQb7CPkRMlZyBGshwThWXi3zhVIas5bU"
     }
 };
 
