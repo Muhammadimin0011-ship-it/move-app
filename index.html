@@ -17,7 +17,123 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
+    <header
+      class="header normal smaller no_animation smaller subtle show_search_true"
+    >
+      <div class="content">
+        <div class="sub_media">
+          <div class="nav_wrapper">
+            <a class="logo" aria-label="TMDB" href="/">
+              <img
+                alt="The Movie Database (TMDB)"
+                width="154"
+                height="20"
+                src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+              />
+            </a>
+            <ul class="dropdown_menu navigation" role="menubar">
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/movie"
+                  >Фильмы <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="./screens/Film/popular/index.html">Популярные</a>
+                  <a href="./screens/Film/watch now/index.html">Сейчас в кино</a>
+                  <a href="./screens/Film/expected/index.html">Ожидаемые</a>
+                  <a href="./screens/Film/the best/index.html">Лучшие</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/tv"
+                  >Сериалы <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/tv">Популярные</a>
+                  <a href="/tv/airing-today">В эфире сегодня</a>
+                  <a href="/tv/on-the-air">Сейчас в эфире</a>
+                  <a href="/tv/top-rated">Лучшие</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/person"
+                  >Люди <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/person">Популярные люди</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="/award"
+                  >Awards <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/award">Популярные награды</a>
+                  <a href="/award/upcoming">Предстоящие</a>
+                </div>
+              </li>
+              <li class="menu-item" aria-haspopup="true">
+                <a class="menu-link" href="#"
+                  >Ещё <span class="caret">▼</span></a
+                >
+                <div class="dropdown-menu">
+                  <a href="/discuss">Обсуждения</a>
+                  <a href="/leaderboard">Доска лидеров</a>
+                  <a href="/talk">Поддержка</a>
+                  <a href="/docs">Документация API</a>
+                  <a href="/api-for-business">API для бизнеса</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="flex">
+            <ul class="primary">
+              <li class="glyph new_buttons">
+                <a
+                  class="new_icon"
+                  aria-label="Добавить фильм или сериал"
+                  href="#"
+                >
+                  <span class="plus-icon">+</span>
+                </a>
+              </li>
+              <li class="translate">
+                <div>RU</div>
+              </li>
+              <li><a href="./screens/reg-log/log/index.html">Войти</a></li>
+              <li><a href="./screens/reg-log/register/index.html">Присоединиться к TMDB</a></li>
+              <li class="glyph search_buttons">
+                <a class="search" aria-label="Поиск" href="#">
+                  <span class="search-icon"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></span>
+                </a>
+                <a class="close hide" aria-label="Закрыть поиск" href="#">
+                  <span class="close-icon">✕</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="search_bar">
+        <section class="search show_search_true">
+          <div class="sub_media">
+            <form id="search_form" action="/search" method="get">
+              <label>
+                <input
+                  type="text"
+                  id="search_v4"
+                  name="query"
+                  placeholder="Поиск фильмов, сериалов, персон..."
+                  autocomplete="off"
+                />
+              </label>
+              <input type="submit" value="Найти" />
+            </form>
+          </div>
+        </section>
+      </div>
+    </header>
 
     <nav>
       <div class="search-top">
@@ -51,7 +167,7 @@
 
     <section class="section">
       <div class="top">
-        <h2>В тренде</h2>
+        <h2 style="color: black;">В тренде</h2>
 
         <div class="tabs">
           <button class="active">Сегодня</button>
@@ -165,7 +281,7 @@
 
     <section class="popular">
       <div class="popular-top">
-        <h2>Что популярно</h2>
+        <h2 style="color: black;">Что популярно</h2>
 
         <div class="tabs">
           <button class="active">В кинотеатрах</button>
@@ -438,6 +554,63 @@
         </div>
       </div>
     </section>
+
+    <footer class="tmdb-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="logo">THE MOVIE DB</div>
+          <button class="join-community" id="joinCommunityBtn">
+            ВСТУПИТЬ В СООБЩЕСТВО
+          </button>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h3>ГЛАВНОЕ</h3>
+            <ul>
+              <li><a href="#">О TMDDB</a></li>
+              <li><a href="#">Связаться с нами</a></li>
+              <li><a href="#">API Documentation</a></li>
+              <li><a href="#">API for Business</a></li>
+              <li><a href="#">Статус системы</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>УЧАСТВУЙТЕ</h3>
+            <ul>
+              <li><a href="#">Библия редакторов</a></li>
+              <li><a href="#">Добавить новый фильм</a></li>
+              <li><a href="#">Добавить новый сериал</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>СООБЩЕСТВО</h3>
+            <ul>
+              <li><a href="#">Руководства</a></li>
+              <li><a href="#">Обсуждения</a></li>
+              <li><a href="#">Доска почёта</a></li>
+              <li><a href="#">Формы поддержки</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>О ПРАВЕ</h3>
+            <ul>
+              <li><a href="#">Условия использования</a></li>
+              <li><a href="#">API Правила использования</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">DMCA Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>© 2025 The Movie Database. Все права защищены.</p>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
