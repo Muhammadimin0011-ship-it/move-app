@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie db</title>
+    <link rel="stylesheet" href="../expected/style/style.css">
+</head>
+<body>
+    <div class="main-container">
+      <h2 class="page-title">Popular TV Shows</h2>
+
+      <div class="content-wrapper">
+        <aside class="filter-panel">
+          <div class="accordion-item expanded">
+            <div class="accordion-header">
+              <span>Sort</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <div class="filter-section">
+                <h4>Sort Results By</h4>
+                <select id="sort-by-select" class="select-dropdown">
+                  <option value="popularity.desc" selected>
+                    Popularity Descending
+                  </option>
+                  <option value="popularity.asc">Popularity Ascending</option>
+                  <option value="vote_average.desc">Rating Descending</option>
+                  <option value="vote_average.asc">Rating Ascending</option>
+                  <option value="first_air_date.desc">
+                    First Air Date Descending
+                  </option>
+                  <option value="first_air_date.asc">
+                    First Air Date Ascending
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Where To Watch</span>
+              <span class="badge">259</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="accordion-content">
+              <div class="filter-section">
+                <h4>My Services</h4>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="restrict-services" /> Restrict
+                  searches to my subscribed services?
+                </label>
+              </div>
+              <div class="filter-section">
+                <h4>Country</h4>
+                <select id="country-select" class="select-dropdown">
+                  <option value="US" selected>United States</option>
+                  <option value="UZ">Uzbekistan</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="RU">Russia</option>
+                </select>
+              </div>
+              <div class="providers-grid">
+                <div class="provider-icon logo-netflix" title="Netflix"></div>
+                <div class="provider-icon logo-prime" title="Prime Video"></div>
+                <div class="provider-icon logo-apple" title="Apple TV"></div>
+                <div class="provider-icon logo-disney" title="Disney+"></div>
+                <div class="provider-icon logo-hulu" title="Hulu"></div>
+                <div class="provider-icon logo-hbo" title="Max"></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item expanded">
+            <div class="accordion-header">
+              <span>Filters</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <div class="filter-section">
+                <h4>Show Me <i class="fas fa-info-circle info-icon"></i></h4>
+                <label class="radio-label"
+                  ><input type="radio" name="show_me" value="all" checked />
+                  Everything</label
+                >
+                <label class="radio-label"
+                  ><input type="radio" name="show_me" value="not_seen" /> TV
+                  Shows I Haven't Seen</label
+                >
+                <label class="radio-label"
+                  ><input type="radio" name="show_me" value="seen" /> TV Shows I
+                  Have Seen</label
+                >
+              </div>
+
+              <div class="filter-section">
+                <h4>Availabilities</h4>
+                <label class="checkbox-label"
+                  ><input type="checkbox" /> Search all availabilities?</label
+                >
+                <div class="sub-checkboxes">
+                  <label class="checkbox-label"
+                    ><input type="checkbox" checked /> Stream</label
+                  >
+                  <label class="checkbox-label"
+                    ><input type="checkbox" checked /> Free</label
+                  >
+                  <label class="checkbox-label"
+                    ><input type="checkbox" checked /> Ads</label
+                  >
+                  <label class="checkbox-label"
+                    ><input type="checkbox" checked /> Rent</label
+                  >
+                  <label class="checkbox-label"
+                    ><input type="checkbox" checked /> Buy</label
+                  >
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h4>Release Dates</h4>
+                <label class="checkbox-label"
+                  ><input type="checkbox" checked /> Search all releases?</label
+                >
+                <div class="date-inputs">
+                  <div class="date-field">
+                    <span>from</span><input type="date" id="date-from" />
+                  </div>
+                  <div class="date-field">
+                    <span>to</span><input type="date" id="date-to" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h4>Genres</h4>
+                <div class="genres-grid">
+                  <span class="genre-tag" data-id="10759"
+                    >Action & Adventure</span
+                  >
+                  <span class="genre-tag" data-id="16">Animation</span>
+                  <span class="genre-tag" data-id="35">Comedy</span>
+                  <span class="genre-tag" data-id="80">Crime</span>
+                  <span class="genre-tag" data-id="99">Documentary</span>
+                  <span class="genre-tag" data-id="18">Drama</span>
+                  <span class="genre-tag" data-id="10751">Family</span>
+                  <span class="genre-tag" data-id="10762">Kids</span>
+                  <span class="genre-tag" data-id="9648">Mystery</span>
+                  <span class="genre-tag" data-id="10763">News</span>
+                  <span class="genre-tag" data-id="10764">Reality</span>
+                  <span class="genre-tag" data-id="10765"
+                    >Sci-Fi & Fantasy</span
+                  >
+                  <span class="genre-tag" data-id="10766">Soap</span>
+                  <span class="genre-tag" data-id="10767">Talk</span>
+                  <span class="genre-tag" data-id="10768">War & Politics</span>
+                  <span class="genre-tag" data-id="37">Western</span>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h4>Language <i class="fas fa-info-circle info-icon"></i></h4>
+                <select id="lang-select" class="select-dropdown">
+                  <option value="">None Selected</option>
+                  <option value="en">English</option>
+                  <option value="uz">Uzbek</option>
+                  <option value="ru">Russian</option>
+                </select>
+              </div>
+              <div class="filter-section">
+                <h4>
+                  User Score
+                  <span id="user-score-val" class="slider-current-val">10</span>
+                </h4>
+                <div class="tmdb-slider-container">
+                  <div class="slider-track-ticks">
+                    <span style="left: 0%"></span>
+                    <span style="left: 50%"></span>
+                    <span style="left: 100%"></span>
+                  </div>
+                  <input
+                    type="range"
+                    id="user-score-slider"
+                    class="tmdb-range-slider"
+                    min="0"
+                    max="10"
+                    value="10"
+                  />
+                  <div class="slider-axis-labels">
+                    <span style="left: 0%">0</span>
+                    <span style="left: 50%">5</span>
+                    <span style="left: 100%">10</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h4>
+                  Minimum User Votes
+                  <span id="user-votes-val" class="slider-current-val">0</span>
+                </h4>
+                <div class="tmdb-slider-container">
+                  <div class="slider-track-ticks">
+                    <span style="left: 0%"></span>
+                    <span style="left: 20%"></span>
+                    <span style="left: 40%"></span>
+                    <span style="left: 60%"></span>
+                    <span style="left: 80%"></span>
+                    <span style="left: 100%"></span>
+                  </div>
+                  <input
+                    type="range"
+                    id="user-votes-slider"
+                    class="tmdb-range-slider"
+                    min="0"
+                    max="500"
+                    value="0"
+                    step="50"
+                  />
+                  <div class="slider-axis-labels">
+                    <span style="left: 0%">0</span>
+                    <span style="left: 20%">100</span>
+                    <span style="left: 40%">200</span>
+                    <span style="left: 60%">300</span>
+                    <span style="left: 80%">400</span>
+                    <span style="left: 100%">500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h4>
+                  Runtime
+                  <span id="runtime-val" class="slider-current-val">360</span>
+                </h4>
+                <div class="tmdb-slider-container">
+                  <div class="slider-track-ticks">
+                    <span style="left: 0%"></span>
+                    <span style="left: 33.33%"></span>
+                    <span style="left: 66.66%"></span>
+                    <span style="left: 100%"></span>
+                  </div>
+                  <input
+                    type="range"
+                    id="runtime-slider"
+                    class="tmdb-range-slider"
+                    min="0"
+                    max="360"
+                    value="360"
+                    step="15"
+                  />
+                  <div class="slider-axis-labels">
+                    <span style="left: 0%">0</span>
+                    <span style="left: 33.33%">120</span>
+                    <span style="left: 66.66%">240</span>
+                    <span style="left: 100%">360</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h4>Keywords</h4>
+                <input
+                  type="text"
+                  id="keywords-input"
+                  class="text-input-field"
+                  placeholder="Filter by keywords..."
+                />
+              </div>
+            </div>
+          </div>
+
+          <button class="search-submit-btn" id="search-submit-btn">
+            Search
+          </button>
+        </aside>
+
+        <main class="movies-grid" id="movies-container">
+          <div id="Results"></div>
+        </main>
+      </div>
+    <script src="./script.js"></script>
+</body>
+</html>
