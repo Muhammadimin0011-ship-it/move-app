@@ -1,4 +1,3 @@
-
 const MEDIAL_LINK = "https://image.tmdb.org/t/p/w300";
 
 const options = {
@@ -10,15 +9,68 @@ const options = {
     }
 };
 
-// Kino ma'lumotlarini olish
-async function getInfo() {
 
+
+
+
+
+
+
+
+
+async function getInfo() {
     try {
 
-        const res = await fetch(
-            "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
-            options
-        );
+        const sortBy =
+            document.getElementById("sort-by-select")?.value ||
+            "popularity.desc";
+
+        const language =
+            document.getElementById("lang-select")?.value || "";
+
+        const score =
+            document.getElementById("user-score-slider")?.value || 0;
+
+        const votes =
+            document.getElementById("user-votes-slider")?.value || 0;
+
+        const dateFrom =
+            document.getElementById("date-from")?.value || "";
+
+        const dateTo =
+            document.getElementById("date-to")?.value || "";
+
+        const genres = [
+            ...document.querySelectorAll(".genre-tag.active")
+        ].map(item => item.dataset.id);
+
+        let url =
+            `https://api.themoviedb.org/3/discover/movie?` +
+            `include_adult=false` +
+            `&include_video=false` +
+            `&language=en-US` +
+            `&page=1` +
+            `&sort_by=${sortBy}` +
+            `&vote_average.gte=${score}` +
+            `&vote_count.gte=${votes}`;
+
+        if (genres.length) {
+            url += `&with_genres=${genres.join(",")}`;
+        }
+
+        if (language) {
+            url += `&with_original_language=${language}`;
+        }
+
+        if (dateFrom) {
+            url += `&primary_release_date.gte=${dateFrom}`;
+        }
+
+        if (dateTo) {
+            url += `&primary_release_date.lte=${dateTo}`;
+        }
+
+        const res = await fetch(url, options);
 
         const data = await res.json();
 
@@ -26,41 +78,108 @@ async function getInfo() {
 
     } catch (error) {
 
-        console.log("Error:", error);
+        console.log(error);
 
     }
 }
 
-// Kino detail pagega o'tish
-function setId(id) {
 
-    window.location.href =
-        `../../movie-detelies/index.html?id=${id}`;
 
-}
 
-// Kinolarni chiqarish
-(async function () {
 
-    const resultMovies = document.getElementById("Results");
+
+
+
+document.querySelectorAll(".genre-tag").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+
+
+
+
+
+
+
+const scoreSlider =
+    document.getElementById("user-score-slider");
+
+const scoreText =
+    document.getElementById("user-score-val");
+
+scoreSlider?.addEventListener("input", () => {
+
+    scoreText.textContent =
+        scoreSlider.value;
+
+});
+
+const votesSlider =
+    document.getElementById("user-votes-slider");
+
+const votesText =
+    document.getElementById("user-votes-val");
+
+votesSlider?.addEventListener("input", () => {
+
+    votesText.textContent =
+        votesSlider.value;
+
+});
+
+
+
+
+
+
+
+
+
+
+
+document
+    .getElementById("search-submit-btn")
+    .addEventListener("click", loadMovies);
+
+
+
+
+
+
+
+
+
+
+
+async function loadMovies() {
+
+    const resultMovies =
+        document.getElementById("Results");
+
+    resultMovies.innerHTML = "";
 
     const data = await getInfo();
 
     const movies = data.results;
 
-    console.log(movies);
-
-    movies.forEach((item) => {
+    movies.forEach(item => {
 
         resultMovies.innerHTML += `
 
-        <div 
+        <div
             onclick="setId(${item.id})"
             class="movilCart"
         >
 
-            <img 
-                src="${MEDIAL_LINK + item.poster_path}" 
+            <img
+                src="${MEDIAL_LINK + item.poster_path}"
                 alt="${item.original_title}"
             >
 
@@ -74,5 +193,16 @@ function setId(id) {
 
     });
 
-})();
+}
 
+
+
+
+loadMovies();
+
+
+
+
+console.log(document.getElementById("search-submit-btn"));
+console.log(document.getElementById("Results"));
+console.log(document.getElementById("sort-by-select"));
