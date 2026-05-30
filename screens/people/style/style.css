@@ -1,0 +1,67 @@
+#actors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.actor-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.actor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.actor-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.actor-card h4 {
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 14px 14px 6px;
+    line-height: 1.2;
+}
+
+.actor-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 14px 16px;
+}
+
+@media (max-width: 768px) {
+    #actors {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .actor-card img {
+        height: 260px;
+    }
+
+    .actor-card h4 {
+        font-size: 18px;
+    }
+
+    .actor-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    #actors {
+        grid-template-columns: 1fr;
+    }
+}
