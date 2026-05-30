@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: white;
+}
+
+#result {
+  min-height: 100vh;
+}
+
+.movieDetail {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.movieBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.poster {
+  width: 320px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
+}
+
+.poster img {
+  width: 100%;
+  display: block;
+}
+
+.movieInfo {
+  max-width: 650px;
+}
+
+.movieInfo h1 {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #ffcc00;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  color: #d0d0d0;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+
+.infoRow {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.infoBox {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 14px 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.infoBox h3 {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.infoBox p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.genres {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.genres span {
+  padding: 10px 18px;
+  background: #ffcc00;
+  color: black;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .overlay {
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .movieInfo h1 {
+    font-size: 38px;
+  }
+
+  .poster {
+    width: 260px;
+  }
+
+  .infoRow {
+    justify-content: center;
+  }
+
+  .genres {
+    justify-content: center;
+  }
+}

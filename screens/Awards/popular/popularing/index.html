@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popularing Awards</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="contaner">
+<div class="award-container">
+    <br>
+    <h3>Popular Awards</h3>
+    <br>
+    <div class="dropdown-item">
+        <span>Сортировать</span>
+        <i class="arrow right"></i>
+    </div>
+
+    <div class="filters-box">
+        <div class="dropdown-item active">
+            <span>Фильтр</span>
+            <i class="arrow down"></i>
+        </div>
+        
+        <div class="filters-content">
+            <p class="label-text">Latest Ceremony</p>
+            
+            <div class="date-input-group">
+                <label>от</label>
+                <div class="input-wrapper">
+                    <input type="text" id="dateFrom" placeholder="">
+                    <span class="calendar-icon">📅</span>
+                </div>
+            </div>
+
+            <div class="date-input-group">
+                <label>до</label>
+                <div class="input-wrapper">
+                    <input type="text" id="dateTo" value="26.11.2026">
+                    <span class="calendar-icon">📅</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="search-btn">Поиск</button>
+</div>
+
+<br><br><br>
+    <div id="trendingMovies"></div>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html> 
+
