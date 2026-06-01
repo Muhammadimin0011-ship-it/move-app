@@ -222,6 +222,23 @@ body {
     padding: 10px 12px 20px;
 }
 
+
+.movieInfo {
+    margin-top: 30px;
+    max-width: 900px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.movieInfo::first-letter {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
