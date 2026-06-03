@@ -171,3 +171,6 @@ fetch(
 function goPersonPage(id) {
     window.location.href = `screens/person-detelies/index.html?id=${id}`
 }
+
+
+console.log(typeof null);
